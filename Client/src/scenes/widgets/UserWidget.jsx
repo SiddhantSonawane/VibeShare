@@ -41,6 +41,7 @@ const UserWidget = ({ userId, picturePath, editProfileIcon }) => {
                 }
             }
         )
+        await response.json()
     }
 
     const impressionsCount = async() => {
@@ -52,6 +53,7 @@ const UserWidget = ({ userId, picturePath, editProfileIcon }) => {
                 }
             }
         )
+        await response.json()
     }
 
     useEffect(() => {

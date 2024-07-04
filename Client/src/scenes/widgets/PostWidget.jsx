@@ -51,6 +51,7 @@ import {
               }
           }
       )
+      await response.json()
   }
   
     const patchLike = async () => {
@@ -96,7 +97,7 @@ import {
           }
         }
       )
-      const data = response.json()
+      await response.json()
     }
   
     return (

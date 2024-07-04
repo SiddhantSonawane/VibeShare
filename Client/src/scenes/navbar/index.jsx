@@ -260,9 +260,6 @@ import {
     FormControl,
     useTheme,
     useMediaQuery,
-    List,
-    ListItem,
-    ListItemText
 } from "@mui/material";
 import {
     Search,
@@ -335,6 +332,7 @@ const Navbar = () => {
                 Authorization: `Bearer ${token}`
             }
         });
+        await response.json()
     };
 
     return (
