@@ -1,3 +1,7 @@
+IMPORTANT NOTE: SEE AT BOTTOM
+
+
+
 VibeShare
 
 Welcome to VibeShare - the social media app for sociopaths. Connect with like-minded individuals, share your thoughts, and explore a unique social networking experience.
@@ -24,3 +28,11 @@ Backend: Node.js, Express.js
 Database: MongoDB
 Authentication: JWT (JSON Web Tokens)
 File Uploads: Multer
+
+
+
+To test the functionality currently the registering a new user is not working due to user image storing capabilities
+try out the product by directky logging in using given sample credentials:
+
+email: natlin@email.com
+password: natlin1234
