@@ -61,8 +61,6 @@ const Form = ()=> {
     const isLogin = pageType === "login"
     const isRegister = pageType === "register"
 
-    let URL = process.env.REACT_APP_API_URL;
-
     const register = async(values, onSubmitProps) => {
         // formdata allows us to send form data and info with image
         const formData = new FormData()
@@ -73,7 +71,7 @@ const Form = ()=> {
         formData.append('picturePath', values.picture.name)
 
         const emailExistsResponse = await fetch(
-            `${URL}auth/validatemail`,
+            `${process.env.REACT_APP_API_URL}auth/validatemail`,
             {
                 method: "POST",
                 headers: {
@@ -93,7 +91,7 @@ const Form = ()=> {
 
 
         const savedUserResponse = await fetch(
-            `${URL}auth/register`,
+            `${process.env.REACT_APP_API_URL}auth/register`,
             {
                 method: "POST",
                 body: formData
@@ -111,7 +109,7 @@ const Form = ()=> {
 
     const login = async(values, onSubmitProps) => {
         const loggedInResponse = await fetch(
-            `${URL}auth/login`,
+            `${process.env.REACT_APP_API_URL}auth/login`,
             {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
