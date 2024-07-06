@@ -25,11 +25,16 @@ const Friend = ({friendId, name, subtitle, userPicturePath, showIcon}) => {
     if(friends.length > 0)
         isFriend = friends.find((friend) => friend._id === friendId)
 
+    let URL = process.env.REACT_APP_API_URL;
+
     const patchFriend = async () => {
         if(_id === friendId){
             alert("Don't be this much Introvert! We know you are already your friend...😂")
         }
-        const response = await fetch(`http://localhost:3001/user/${_id}/${friendId}`, 
+        if(process.env.REACT_DEPLOYMENT === "PRODUCTION") {
+            URL = process.env.REACT_APP_API_URL
+        }  
+        const response = await fetch(`${URL}user/${_id}/${friendId}`, 
             {
                 method: "PATCH",
                 headers: {
