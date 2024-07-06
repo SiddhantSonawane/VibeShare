@@ -31,8 +31,12 @@ File Uploads: Multer
 
 
 
+
+
+NOTE:
 To test the functionality currently the registering a new user is not working due to user image storing capabilities
-try out the product by directky logging in using given sample credentials:
+
+Try out the product by directly logging in using given sample credentials:
 
 email: natlin@email.com
 password: natlin1234
