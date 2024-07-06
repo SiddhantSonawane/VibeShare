@@ -25,7 +25,7 @@ const UserWidget = ({ userId, picturePath, editProfileIcon }) => {
 
   const getUser = async () => {
     const response = await fetch(
-      `${process.env.REACT_APP_API_URL}user/${userId}`,
+      `${process.env.REACT_APP_API_URL}/user/${userId}`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
@@ -37,7 +37,7 @@ const UserWidget = ({ userId, picturePath, editProfileIcon }) => {
 
   const profileViewsCount = async () => {
     const response = await fetch(
-      `${process.env.REACT_APP_API_URL}user/profileviews/${userId}`,
+      `${process.env.REACT_APP_API_URL}/user/profileviews/${userId}`,
       {
         method: "PATCH",
         headers: {
@@ -50,7 +50,7 @@ const UserWidget = ({ userId, picturePath, editProfileIcon }) => {
 
   const impressionsCount = async () => {
     const response = await fetch(
-      `${process.env.REACT_APP_API_URL}user/impressions/${userId}`,
+      `${process.env.REACT_APP_API_URL}/user/impressions/${userId}`,
       {
         method: "PATCH",
         headers: {

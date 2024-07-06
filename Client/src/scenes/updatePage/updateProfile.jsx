@@ -26,7 +26,7 @@ const ProfileForm = () => {
   const updateUserProfile = async (userId, token, userData) => {
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_API_URL}user/${userId}/update`,
+        `${process.env.REACT_APP_API_URL}/user/${userId}/update`,
         {
           method: "PUT",
           headers: {

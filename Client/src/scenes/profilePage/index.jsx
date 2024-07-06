@@ -17,7 +17,7 @@ const ProfilePage = () => {
 
   const getUserData = async () => {
     const response = await fetch(
-      `${process.env.REACT_APP_API_URL}user/${userId}`,
+      `${process.env.REACT_APP_API_URL}/user/${userId}`,
       {
         method: "GET",
         headers: {

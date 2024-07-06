@@ -52,7 +52,7 @@ const PostWidget = ({
   const impressionsCount = async () => {
     const userId = user._id;
     const response = await fetch(
-      `${process.env.REACT_APP_API_URL}user/impressions/${userId}`,
+      `${process.env.REACT_APP_API_URL}/user/impressions/${userId}`,
       {
         method: "PATCH",
         headers: {
@@ -65,7 +65,7 @@ const PostWidget = ({
 
   const patchLike = async () => {
     const response = await fetch(
-      `${process.env.REACT_APP_API_URL}posts/${postId}/like`,
+      `${process.env.REACT_APP_API_URL}/posts/${postId}/like`,
       {
         method: "PATCH",
         headers: {
@@ -85,7 +85,7 @@ const PostWidget = ({
     if (commentText.trim() === "") return;
 
     const response = await fetch(
-      `${process.env.REACT_APP_API_URL}posts/${postId}/comment`,
+      `${process.env.REACT_APP_API_URL}/posts/${postId}/comment`,
       {
         method: "PATCH",
         headers: {
@@ -108,7 +108,7 @@ const PostWidget = ({
 
   const handlePostDelete = async () => {
     const response = await fetch(
-      `${process.env.REACT_APP_API_URL}posts/${postId}`,
+      `${process.env.REACT_APP_API_URL}/posts/${postId}`,
       {
         method: "DELETE",
         headers: {
@@ -141,7 +141,7 @@ const PostWidget = ({
               style={{ borderRadius: "0.75rem", marginTop: "0.75rem" }}
             >
               <source
-                src={`${process.env.REACT_APP_API_URL}assets/${mediaPath}`}
+                src={`${process.env.REACT_APP_API_URL}/assets/${mediaPath}`}
                 type="video/mp4"
               />
             </video>
@@ -151,7 +151,7 @@ const PostWidget = ({
               height="auto"
               alt="post"
               style={{ borderRadius: "0.75rem", marginTop: "0.75rem" }}
-              src={`${process.env.REACT_APP_API_URL}assets/${mediaPath}`}
+              src={`${process.env.REACT_APP_API_URL}/assets/${mediaPath}`}
             />
           )}
         </>

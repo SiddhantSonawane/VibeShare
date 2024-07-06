@@ -48,7 +48,7 @@
 
 //     const handleSearch = async () => {
 //         try {
-//             const response = await fetch(`${process.env.REACT_APP_API_URL}user/search?query=${searchQuery}`, {
+//             const response = await fetch(`${process.env.REACT_APP_API_URL}/user/search?query=${searchQuery}`, {
 //                 method: "GET",
 //                 headers: {
 //                     Authorization: `Bearer ${token}`
@@ -63,7 +63,7 @@
 
 //     const profileViewsCount = async() => {
 //         const userId = user._id
-//         const response = await fetch(`${process.env.REACT_APP_API_URL}user/profileviews/${userId}`,
+//         const response = await fetch(`${process.env.REACT_APP_API_URL}/user/profileviews/${userId}`,
 //             {
 //                 method: "PATCH",
 //                 headers: {
@@ -298,7 +298,7 @@ const Navbar = () => {
   const handleSearchSubmit = async () => {
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_API_URL}user/search?query=${searchQuery}`,
+        `${process.env.REACT_APP_API_URL}/user/search?query=${searchQuery}`,
         {
           method: "GET",
           headers: {
@@ -326,7 +326,7 @@ const Navbar = () => {
   const profileViewsCount = async () => {
     const userId = user._id;
     const response = await fetch(
-      `${process.env.REACT_APP_API_URL}user/profileviews/${userId}`,
+      `${process.env.REACT_APP_API_URL}/user/profileviews/${userId}`,
       {
         method: "PATCH",
         headers: {
